@@ -95,13 +95,20 @@ body {
  .page-home{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: .3fr 4fr auto 1fr;
+    grid-template-rows: .3fr 4fr auto;
     justify-items: center;
     /* max-width: 100em; */
     
     
 }
 
+#jobs-page .page-home {
+    grid-template-rows: .1fr 4fr auto;
+}
+
+#reviews-page .page-home {
+    grid-template-rows: .1fr 4fr auto;
+}
 
 
 .home-content {
@@ -164,7 +171,9 @@ body {
 @media screen and (max-width: 750px){
     .page-home{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: .1fr 4fr auto;
+        justify-items: center;
         
     }
 
@@ -406,9 +415,9 @@ nav a:active {
 /* ----------big size screeen navigation---------- */
     @media screen and (min-width: 750px) {
         .page   {
-            max-height: 1000px;
+            max-height: 100%;
             display: grid;         
-            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-columns: .3fr 4fr 1fr;
             grid-template-rows: minmax(90px, 2fr) 3fr 2fr;
             
         
@@ -578,7 +587,7 @@ nav a:active {
     }
     
     .nav-toggle-label span::after {
-        transform: translateY(3px);
+        transform: translateY(5px);
     }
     
     nav {
